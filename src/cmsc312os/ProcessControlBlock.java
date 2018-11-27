@@ -7,23 +7,19 @@ public class ProcessControlBlock
 	private String state = "NEW"; 
 	private int pid;
 	private boolean cooperating = false;
-	private int priority;
-	private int ProgramCounter;
-	
+	private int ProgramCounter=0; //starts at  first line
+	private int tempcycles=0;
+//	private boolean preemptive; //needs to execute NOW
+
 	//private ArrayList <Register>???
-	private String memMin; //min and max locations in memory
-	private String memMax;
+	private ArrayList <Integer> frames= new ArrayList <Integer> ();
 	private int CPU; //which cpu is being used
 	private int elapTime=0;
-	private int timeLim;
+	private int timeLim=50; //50 ms?? for example
 	//private ArrayList<File> files = new ArrayList <File>(0); //keep track of files being used
 	//private ArrayList<Object> IOdevices = new ArrayList <Object>(0); //keep track of IO devices
 	
-	
-	public ProcessControlBlock(int pid) //constructor
-	{
-		this.pid=pid;
-	}
+
 	public String getState() {
 		return state;
 	}
@@ -42,30 +38,18 @@ public class ProcessControlBlock
 	public void setCooperating(boolean cooperating) {
 		this.cooperating = cooperating;
 	}
-	public int getPriority() {
-		return priority;
-	}
-	public void setPriority(int priority) {
-		this.priority = priority;
-	}
+
 	public int getProgramCounter() {
 		return ProgramCounter;
 	}
 	public void setProgramCounter(int programCounter) {
 		ProgramCounter = programCounter;
 	}
-	public String getMemMin() {
-		return memMin;
+	public void incrementPC()
+	{
+		ProgramCounter++;
 	}
-	public void setMemMin(String memMin) {
-		this.memMin = memMin;
-	}
-	public String getMemMax() {
-		return memMax;
-	}
-	public void setMemMax(String memMax) {
-		this.memMax = memMax;
-	}
+
 	public int getCPU() {
 		return CPU;
 	}
@@ -83,5 +67,18 @@ public class ProcessControlBlock
 	}
 	public void setTimeLim(int timeLim) {
 		this.timeLim = timeLim;
+	}
+
+	public int getTempcycles() {
+		return tempcycles;
+	}
+	public void setTempcycles(int tempcycles) {
+		this.tempcycles = tempcycles;
+	}
+	public ArrayList<Integer> getFrames() {
+		return frames;
+	}
+	public void setFrames(ArrayList<Integer> frames) {
+		this.frames = frames;
 	}
 }

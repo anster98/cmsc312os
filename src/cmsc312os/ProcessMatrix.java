@@ -5,14 +5,14 @@ public abstract class ProcessMatrix
 {
 	
 	private ArrayList<ProcessF> children = new ArrayList<ProcessF> (0); //stores all children
-	private ProcessMatrix parent; //keep track of parent
+	private ProcessF parent; //keep track of parent
 	public ProcessControlBlock PCB;
 
-	public ProcessMatrix getParent() {
+	public ProcessF getParent() {
 		return parent;
 	}
 
-	public void setParent(ProcessMatrix parent) {
+	public void setParent(ProcessF parent) {
 		this.parent = parent;
 	}
 
@@ -40,8 +40,7 @@ public abstract class ProcessMatrix
 	public void abort(int i) {} //kill child
 	
 	public void exec() {} //called after fork to replace a process' memory space w new program
-	
-	public void run() {} //run process
+
 	
 	
 	

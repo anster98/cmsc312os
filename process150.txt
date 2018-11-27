@@ -1,0 +1,5 @@
+CPU 30
+IO 30
+fork
+sendmail
+YIELD

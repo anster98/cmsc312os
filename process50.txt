@@ -1,0 +1,11 @@
+CPU 70
+IO 30
+cs
+CPU 20
+IO 50
+cse
+resource 3
+CPU 40
+IO 60
+fork
+YIELD

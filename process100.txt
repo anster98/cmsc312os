@@ -1,0 +1,10 @@
+CPU 60
+IO 20
+cs
+CPU 10
+IO 40
+cse
+sendmail
+getmail
+sendmsg
+YIELD
