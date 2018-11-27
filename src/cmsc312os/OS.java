@@ -83,7 +83,7 @@ public class OS {
 //						System.out.println("process created");
 //					}
 //				}
-                       // gui.addRows(LTS.ReadyQ);
+                       gui.addRows(LTS.ReadyQ);
 //			GUI gui = new GUI (LTS.ReadyQ);
 //                        gui.start();
 			long begin = System.nanoTime();
